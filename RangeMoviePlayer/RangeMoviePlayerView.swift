@@ -136,7 +136,7 @@ extension RangeMoviePlayerView {
             }
             .subscribe(onNext: { [weak self] seekStatus in
                 guard let weakSelf = self else { return }
-                let value = weakSelf.ui.seekSlider.value
+                let value:Float = weakSelf.ui.seekSlider.value
                 weakSelf.avPlayerLayer.seek(to: Double(value))
             })
         
